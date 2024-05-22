@@ -32,7 +32,10 @@ namespace Backend.POC.Controllers
         [HttpGet("data/{id}")]
         public async Task<IActionResult> GetData(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _context.Testes.FirstOrDefaultAsync(x => x.Id == id, cancellationToken));
+            var data = await _context.Testes.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+            var campos = await _context.Campos.ToListAsync(cancellationToken);
+
+            return Ok(new { data, campos });
         }
     }
 }
