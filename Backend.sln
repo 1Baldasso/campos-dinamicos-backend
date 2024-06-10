@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.POC", "Backend.POC\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Persistence", "Backend.Persistence\Backend.Persistence.csproj", "{CDE3A245-7F89-4E29-8554-8F1087B3B534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{CA7604B3-989D-485C-B711-53F7CC3C9765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{CA7604B3-989D-485C-B711-53F7CC3C9765}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
