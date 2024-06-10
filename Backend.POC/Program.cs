@@ -1,6 +1,7 @@
 using Backend.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ builder.Services.AddDbContext<PocContext>(op =>
     .LogTo(Console.WriteLine, categories: [DbLoggerCategory.Database.Transaction.Name, DbLoggerCategory.Database.Name], LogLevel.Trace, DbContextLoggerOptions.Level));
 
 builder.Services.AddScoped<IDatabaseProvider, DatabasePopulator>();
+builder.Services.AddScoped<IDocumentCompletorService, DocumentCompletorService>();
 
 var app = builder.Build();
 

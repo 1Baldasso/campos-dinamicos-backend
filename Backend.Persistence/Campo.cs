@@ -24,4 +24,7 @@ public class Campo
     public required CampoTipo Type { get; set; }
     public string? ExtraData { get; set; }
     public bool Required { get; set; } = false;
+    public bool Readonly { get; set; } = false;
+    public bool Computed { get; set; } = false;
+    public string? ComputeFunction { get; set; }
 }

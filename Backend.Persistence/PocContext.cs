@@ -6,4 +6,7 @@ public class PocContext(DbContextOptions<PocContext> options) : DbContext(option
 {
     public DbSet<Teste> Testes { get; set; }
     public DbSet<Campo> Campos { get; set; }
+
+    public DbSet<TemplateInfo> Templates { get; set; }
+    public DbSet<TemplateCampo> TemplateCampos { get; set; }
 }
